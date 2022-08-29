@@ -1,0 +1,98 @@
+[
+  {
+    "img": "tiles/road_2.png",
+    "rot": 0,
+    "left": "121",
+    "top": "111",
+    "right": "121",
+    "bottom": "111"
+  },
+  {
+    "img": "tiles/road_2.png",
+    "rot": 90,
+    "left": "111",
+    "top": "121",
+    "right": "111",
+    "bottom": "121"
+  },
+  {
+    "img": "tiles/road_2.png",
+    "rot": 180,
+    "left": "121",
+    "top": "111",
+    "right": "121",
+    "bottom": "111"
+  },
+  {
+    "img": "tiles/road_2.png",
+    "rot": 270,
+    "left": "111",
+    "top": "121",
+    "right": "111",
+    "bottom": "121"
+  },
+  {
+    "img": "tiles/road_3.png",
+    "rot": 0,
+    "left": "121",
+    "top": "111",
+    "right": "121",
+    "bottom": "121"
+  },
+  {
+    "img": "tiles/road_3.png",
+    "rot": 90,
+    "left": "121",
+    "top": "121",
+    "right": "111",
+    "bottom": "121"
+  },
+  {
+    "img": "tiles/road_3.png",
+    "rot": 180,
+    "left": "121",
+    "top": "121",
+    "right": "121",
+    "bottom": "111"
+  },
+  {
+    "img": "tiles/road_3.png",
+    "rot": 270,
+    "left": "111",
+    "top": "121",
+    "right": "121",
+    "bottom": "121"
+  },
+  {
+    "img": "tiles/road_curved.png",
+    "rot": 0,
+    "left": "111",
+    "top": "111",
+    "right": "121",
+    "bottom": "121"
+  },
+  {
+    "img": "tiles/road_curved.png",
+    "rot": 90,
+    "left": "121",
+    "top": "111",
+    "right": "111",
+    "bottom": "121"
+  },
+  {
+    "img": "tiles/road_curved.png",
+    "rot": 180,
+    "left": "121",
+    "top": "121",
+    "right": "111",
+    "bottom": "111"
+  },
+  {
+    "img": "tiles/road_curved.png",
+    "rot": 270,
+    "left": "111",
+    "top": "121",
+    "right": "121",
+    "bottom": "111"
+  }
+]
