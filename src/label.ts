@@ -3,7 +3,8 @@ import './style.css';
 enum Edge {
   ANY,
   GRASS,
-  ROAD
+  ROAD,
+  WATER
 }
 
 type Point = {
@@ -21,7 +22,16 @@ type Circle = {
 const tileImages = [
   'road_2.png',
   'road_3.png',
-  'road_curved.png'
+  'church.png',
+  'river_end.png',
+  'river_left.png',
+  'river_road_crossing.png',
+  'river_road_end.png',
+  'river_straight.png',
+  'road_4.png',
+  'road_church.png',
+  'road_curved_left.png',
+  'road_curved_right.png',
 ]
 
 const tileSize = 300;
@@ -121,7 +131,7 @@ canvas.addEventListener('click', (e) => {
   };
   circles.forEach((circle, id) => {
     if (isIntersect(point, circle)) {
-      if (circle.edge === Edge.ROAD) {
+      if (circle.edge === Edge.WATER) {
         circle.edge = Edge.ANY
       } else {
         circle.edge += 1
@@ -140,6 +150,9 @@ const drawArc = (circle: Circle) => {
       break;
     case Edge.ROAD:
       ctx.fillStyle = 'gray';
+      break;
+    case Edge.WATER:
+      ctx.fillStyle = 'blue';
       break;
   }
   
