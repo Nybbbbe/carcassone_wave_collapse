@@ -1,0 +1,34 @@
+[
+  {
+    "img": "tiles/castle_corner.png",
+    "rot": 0,
+    "left": "111",
+    "top": "131",
+    "right": "131",
+    "bottom": "111"
+  },
+  {
+    "img": "tiles/castle_corner.png",
+    "rot": 90,
+    "left": "111",
+    "top": "111",
+    "right": "131",
+    "bottom": "131"
+  },
+  {
+    "img": "tiles/castle_corner.png",
+    "rot": 180,
+    "left": "131",
+    "top": "111",
+    "right": "111",
+    "bottom": "131"
+  },
+  {
+    "img": "tiles/castle_corner.png",
+    "rot": 270,
+    "left": "131",
+    "top": "131",
+    "right": "111",
+    "bottom": "111"
+  }
+]

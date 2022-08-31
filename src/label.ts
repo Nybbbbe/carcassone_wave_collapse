@@ -1,9 +1,9 @@
 import './style.css';
 
 enum Edge {
-  ANY,
   GRASS,
   ROAD,
+  CASTLE,
   WATER
 }
 
@@ -23,15 +23,27 @@ const tileImages = [
   'road_2.png',
   'road_3.png',
   'church.png',
-  'river_end.png',
-  'river_left.png',
-  'river_road_crossing.png',
-  'river_road_end.png',
-  'river_straight.png',
+  // 'river_end.png',
+  // 'river_left.png',
+  // 'river_road_crossing.png',
+  // 'river_road_end.png',
+  // 'river_straight.png',
   'road_4.png',
   'road_church.png',
   'road_curved_left.png',
   'road_curved_right.png',
+  'castle_2_edges_2.png',
+  'castle_2_edges.png',
+  'castle_3_road.png',
+  'castle_3.png',
+  'castle_center.png',
+  'castle_corner_road.png',
+  'castle_corner.png',
+  'castle_corridor.png',
+  'castle_edge_1.png',
+  'castle_edge_road_3.png',
+  'castle_edge_road_corner_2.png',
+  'castle_edge_road_corner.png'
 ]
 
 const tileSize = 300;
@@ -48,49 +60,49 @@ const defaultCircles: Circle[] = [
     x: (canvas.width / 2) - (tileSize / 2),
     y: (canvas.height / 2) - (tileSize / 2),
     radius: 20,
-    edge: Edge.ANY
+    edge: Edge.GRASS
   },
   {
     x: (canvas.width / 2) - (tileSize / 2),
     y: (canvas.height / 2),
     radius: 20,
-    edge: Edge.ANY
+    edge: Edge.GRASS
   },
   {
     x: (canvas.width / 2) - (tileSize / 2),
     y: (canvas.height / 2) + (tileSize / 2),
     radius: 20,
-    edge: Edge.ANY
+    edge: Edge.GRASS
   },
   {
     x: (canvas.width / 2),
     y: (canvas.height / 2) - (tileSize / 2),
     radius: 20,
-    edge: Edge.ANY
+    edge: Edge.GRASS
   },
   {
     x: (canvas.width / 2),
     y: (canvas.height / 2) + (tileSize / 2),
     radius: 20,
-    edge: Edge.ANY
+    edge: Edge.GRASS
   },
   {
     x: (canvas.width / 2) + (tileSize / 2),
     y: (canvas.height / 2) - (tileSize / 2),
     radius: 20,
-    edge: Edge.ANY
+    edge: Edge.GRASS
   },
   {
     x: (canvas.width / 2) + (tileSize / 2),
     y: (canvas.height / 2),
     radius: 20,
-    edge: Edge.ANY
+    edge: Edge.GRASS
   },
   {
     x: (canvas.width / 2) + (tileSize / 2),
     y: (canvas.height / 2) + (tileSize / 2),
     radius: 20,
-    edge: Edge.ANY
+    edge: Edge.GRASS
   }
 ];
 
@@ -132,7 +144,7 @@ canvas.addEventListener('click', (e) => {
   circles.forEach((circle, id) => {
     if (isIntersect(point, circle)) {
       if (circle.edge === Edge.WATER) {
-        circle.edge = Edge.ANY
+        circle.edge = Edge.GRASS
       } else {
         circle.edge += 1
       }
@@ -142,18 +154,19 @@ canvas.addEventListener('click', (e) => {
 
 const drawArc = (circle: Circle) => {
   switch (circle.edge) {
-    case Edge.ANY:
-      ctx.fillStyle = 'black';
-      break;
     case Edge.GRASS:
       ctx.fillStyle = 'green';
       break;
     case Edge.ROAD:
       ctx.fillStyle = 'gray';
       break;
+    case Edge.CASTLE:
+      ctx.fillStyle = 'red';
+      break;
     case Edge.WATER:
       ctx.fillStyle = 'blue';
       break;
+      
   }
   
   ctx.beginPath();

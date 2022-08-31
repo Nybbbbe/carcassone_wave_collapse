@@ -1,0 +1,610 @@
+[
+  {
+    "img": "tiles/road_2.png",
+    "rot": 0,
+    "left": "010",
+    "top": "000",
+    "right": "010",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/road_2.png",
+    "rot": 90,
+    "left": "000",
+    "top": "010",
+    "right": "000",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/road_2.png",
+    "rot": 180,
+    "left": "010",
+    "top": "000",
+    "right": "010",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/road_2.png",
+    "rot": 270,
+    "left": "000",
+    "top": "010",
+    "right": "000",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/road_3.png",
+    "rot": 0,
+    "left": "010",
+    "top": "000",
+    "right": "010",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/road_3.png",
+    "rot": 90,
+    "left": "010",
+    "top": "010",
+    "right": "000",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/road_3.png",
+    "rot": 180,
+    "left": "010",
+    "top": "010",
+    "right": "010",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/road_3.png",
+    "rot": 270,
+    "left": "000",
+    "top": "010",
+    "right": "010",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/church.png",
+    "rot": 0,
+    "left": "000",
+    "top": "000",
+    "right": "000",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/church.png",
+    "rot": 90,
+    "left": "000",
+    "top": "000",
+    "right": "000",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/church.png",
+    "rot": 180,
+    "left": "000",
+    "top": "000",
+    "right": "000",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/church.png",
+    "rot": 270,
+    "left": "000",
+    "top": "000",
+    "right": "000",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/road_4.png",
+    "rot": 0,
+    "left": "010",
+    "top": "010",
+    "right": "010",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/road_4.png",
+    "rot": 90,
+    "left": "010",
+    "top": "010",
+    "right": "010",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/road_4.png",
+    "rot": 180,
+    "left": "010",
+    "top": "010",
+    "right": "010",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/road_4.png",
+    "rot": 270,
+    "left": "010",
+    "top": "010",
+    "right": "010",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/road_church.png",
+    "rot": 0,
+    "left": "000",
+    "top": "000",
+    "right": "000",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/road_church.png",
+    "rot": 90,
+    "left": "010",
+    "top": "000",
+    "right": "000",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/road_church.png",
+    "rot": 180,
+    "left": "000",
+    "top": "010",
+    "right": "000",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/road_church.png",
+    "rot": 270,
+    "left": "000",
+    "top": "000",
+    "right": "010",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/road_curved_left.png",
+    "rot": 0,
+    "left": "010",
+    "top": "000",
+    "right": "000",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/road_curved_left.png",
+    "rot": 90,
+    "left": "010",
+    "top": "010",
+    "right": "000",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/road_curved_left.png",
+    "rot": 180,
+    "left": "000",
+    "top": "010",
+    "right": "010",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/road_curved_left.png",
+    "rot": 270,
+    "left": "000",
+    "top": "000",
+    "right": "010",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/road_curved_right.png",
+    "rot": 0,
+    "left": "000",
+    "top": "000",
+    "right": "010",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/road_curved_right.png",
+    "rot": 90,
+    "left": "010",
+    "top": "000",
+    "right": "000",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/road_curved_right.png",
+    "rot": 180,
+    "left": "010",
+    "top": "010",
+    "right": "000",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/road_curved_right.png",
+    "rot": 270,
+    "left": "000",
+    "top": "010",
+    "right": "010",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_2_edges_2.png",
+    "rot": 0,
+    "left": "000",
+    "top": "020",
+    "right": "000",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_2_edges_2.png",
+    "rot": 90,
+    "left": "020",
+    "top": "000",
+    "right": "020",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_2_edges_2.png",
+    "rot": 180,
+    "left": "000",
+    "top": "020",
+    "right": "000",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_2_edges_2.png",
+    "rot": 270,
+    "left": "020",
+    "top": "000",
+    "right": "020",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_2_edges.png",
+    "rot": 0,
+    "left": "020",
+    "top": "000",
+    "right": "000",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_2_edges.png",
+    "rot": 90,
+    "left": "020",
+    "top": "020",
+    "right": "000",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_2_edges.png",
+    "rot": 180,
+    "left": "000",
+    "top": "020",
+    "right": "020",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_2_edges.png",
+    "rot": 270,
+    "left": "000",
+    "top": "000",
+    "right": "020",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_3_road.png",
+    "rot": 0,
+    "left": "020",
+    "top": "020",
+    "right": "020",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/castle_3_road.png",
+    "rot": 90,
+    "left": "010",
+    "top": "020",
+    "right": "020",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_3_road.png",
+    "rot": 180,
+    "left": "020",
+    "top": "010",
+    "right": "020",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_3_road.png",
+    "rot": 270,
+    "left": "020",
+    "top": "020",
+    "right": "010",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_3.png",
+    "rot": 0,
+    "left": "020",
+    "top": "020",
+    "right": "020",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_3.png",
+    "rot": 90,
+    "left": "000",
+    "top": "020",
+    "right": "020",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_3.png",
+    "rot": 180,
+    "left": "020",
+    "top": "000",
+    "right": "020",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_3.png",
+    "rot": 270,
+    "left": "020",
+    "top": "020",
+    "right": "000",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_center.png",
+    "rot": 0,
+    "left": "020",
+    "top": "020",
+    "right": "020",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_center.png",
+    "rot": 90,
+    "left": "020",
+    "top": "020",
+    "right": "020",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_center.png",
+    "rot": 180,
+    "left": "020",
+    "top": "020",
+    "right": "020",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_center.png",
+    "rot": 270,
+    "left": "020",
+    "top": "020",
+    "right": "020",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_corner_road.png",
+    "rot": 0,
+    "left": "010",
+    "top": "010",
+    "right": "020",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_corner_road.png",
+    "rot": 90,
+    "left": "020",
+    "top": "010",
+    "right": "010",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_corner_road.png",
+    "rot": 180,
+    "left": "020",
+    "top": "020",
+    "right": "010",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/castle_corner_road.png",
+    "rot": 270,
+    "left": "010",
+    "top": "020",
+    "right": "020",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/castle_corner.png",
+    "rot": 0,
+    "left": "000",
+    "top": "020",
+    "right": "020",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_corner.png",
+    "rot": 90,
+    "left": "000",
+    "top": "000",
+    "right": "020",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_corner.png",
+    "rot": 180,
+    "left": "020",
+    "top": "000",
+    "right": "000",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_corner.png",
+    "rot": 270,
+    "left": "020",
+    "top": "020",
+    "right": "000",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_corridor.png",
+    "rot": 0,
+    "left": "020",
+    "top": "000",
+    "right": "020",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_corridor.png",
+    "rot": 90,
+    "left": "000",
+    "top": "020",
+    "right": "000",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_corridor.png",
+    "rot": 180,
+    "left": "020",
+    "top": "000",
+    "right": "020",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_corridor.png",
+    "rot": 270,
+    "left": "000",
+    "top": "020",
+    "right": "000",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_edge_1.png",
+    "rot": 0,
+    "left": "020",
+    "top": "000",
+    "right": "000",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_edge_1.png",
+    "rot": 90,
+    "left": "000",
+    "top": "020",
+    "right": "000",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_edge_1.png",
+    "rot": 180,
+    "left": "000",
+    "top": "000",
+    "right": "020",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_edge_1.png",
+    "rot": 270,
+    "left": "000",
+    "top": "000",
+    "right": "000",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_edge_road_3.png",
+    "rot": 0,
+    "left": "010",
+    "top": "010",
+    "right": "020",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/castle_edge_road_3.png",
+    "rot": 90,
+    "left": "010",
+    "top": "010",
+    "right": "010",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_edge_road_3.png",
+    "rot": 180,
+    "left": "020",
+    "top": "010",
+    "right": "010",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/castle_edge_road_3.png",
+    "rot": 270,
+    "left": "010",
+    "top": "020",
+    "right": "010",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/castle_edge_road_corner_2.png",
+    "rot": 0,
+    "left": "020",
+    "top": "000",
+    "right": "010",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/castle_edge_road_corner_2.png",
+    "rot": 90,
+    "left": "010",
+    "top": "020",
+    "right": "000",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/castle_edge_road_corner_2.png",
+    "rot": 180,
+    "left": "010",
+    "top": "010",
+    "right": "020",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_edge_road_corner_2.png",
+    "rot": 270,
+    "left": "000",
+    "top": "010",
+    "right": "010",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_edge_road_corner.png",
+    "rot": 0,
+    "left": "010",
+    "top": "000",
+    "right": "020",
+    "bottom": "010"
+  },
+  {
+    "img": "tiles/castle_edge_road_corner.png",
+    "rot": 90,
+    "left": "010",
+    "top": "010",
+    "right": "000",
+    "bottom": "020"
+  },
+  {
+    "img": "tiles/castle_edge_road_corner.png",
+    "rot": 180,
+    "left": "020",
+    "top": "010",
+    "right": "010",
+    "bottom": "000"
+  },
+  {
+    "img": "tiles/castle_edge_road_corner.png",
+    "rot": 270,
+    "left": "000",
+    "top": "020",
+    "right": "010",
+    "bottom": "010"
+  }
+]

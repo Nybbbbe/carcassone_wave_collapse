@@ -1,7 +1,8 @@
-import tilesJSON from './../public/tile_no_river.json';
+import tilesJSON from './../public/final.json';
 import './style.css';
 
-const tileSize = 64;
+const NUM_TILES = 10000;
+const TILE_SIZE = 64;
 
 const startingTile = tilesJSON[0];
 
@@ -74,56 +75,56 @@ const checkNeighbours = (placedTile: PlacedTileT) => {
   }
   // Check place tiles
   // left
-  if (getFromPlacedMap(placedTile.worldX - tileSize, placedTile.worldY)) {
+  if (getFromPlacedMap(placedTile.worldX - TILE_SIZE, placedTile.worldY)) {
     pushTiles.left = false;
   }
   // right
-  if (getFromPlacedMap(placedTile.worldX + tileSize, placedTile.worldY)) {
+  if (getFromPlacedMap(placedTile.worldX + TILE_SIZE, placedTile.worldY)) {
     pushTiles.right = false;
   }
   // top
-  if (getFromPlacedMap(placedTile.worldX, placedTile.worldY - tileSize)) {
+  if (getFromPlacedMap(placedTile.worldX, placedTile.worldY - TILE_SIZE)) {
     pushTiles.top = false;
   }
   // bottom
-  if (getFromPlacedMap(placedTile.worldX, placedTile.worldY + tileSize)) {
+  if (getFromPlacedMap(placedTile.worldX, placedTile.worldY + TILE_SIZE)) {
     pushTiles.bottom = false;
   }
 
   // Check Empty Tiles
   // left
-  if (getFromEmptyMap(placedTile.worldX - tileSize, placedTile.worldY)) {
-    const tile = getFromEmptyMap(placedTile.worldX - tileSize, placedTile.worldY)!
+  if (getFromEmptyMap(placedTile.worldX - TILE_SIZE, placedTile.worldY)) {
+    const tile = getFromEmptyMap(placedTile.worldX - TILE_SIZE, placedTile.worldY)!
     tile.rightRes = placedTile.tile.left;
-    addToEmptyMap(placedTile.worldX - tileSize, placedTile.worldY, tile);
+    addToEmptyMap(placedTile.worldX - TILE_SIZE, placedTile.worldY, tile);
     pushTiles.left = false;
   }
   // right
-  if (getFromEmptyMap(placedTile.worldX + tileSize, placedTile.worldY)) {
-    const tile = getFromEmptyMap(placedTile.worldX + tileSize, placedTile.worldY)!
+  if (getFromEmptyMap(placedTile.worldX + TILE_SIZE, placedTile.worldY)) {
+    const tile = getFromEmptyMap(placedTile.worldX + TILE_SIZE, placedTile.worldY)!
     tile.leftRes = placedTile.tile.right;
-    addToEmptyMap(placedTile.worldX + tileSize, placedTile.worldY, tile);
+    addToEmptyMap(placedTile.worldX + TILE_SIZE, placedTile.worldY, tile);
     pushTiles.right = false;
   }
   // top
-  if (getFromEmptyMap(placedTile.worldX, placedTile.worldY - tileSize)) {
-    const tile = getFromEmptyMap(placedTile.worldX, placedTile.worldY - tileSize)!
+  if (getFromEmptyMap(placedTile.worldX, placedTile.worldY - TILE_SIZE)) {
+    const tile = getFromEmptyMap(placedTile.worldX, placedTile.worldY - TILE_SIZE)!
     tile.bottomRes = placedTile.tile.top;
-    addToEmptyMap(placedTile.worldX, placedTile.worldY - tileSize, tile);
+    addToEmptyMap(placedTile.worldX, placedTile.worldY - TILE_SIZE, tile);
     pushTiles.top = false;
   }
   // bottom
-  if (getFromEmptyMap(placedTile.worldX, placedTile.worldY + tileSize)) {
-    const tile = getFromEmptyMap(placedTile.worldX, placedTile.worldY + tileSize)!
+  if (getFromEmptyMap(placedTile.worldX, placedTile.worldY + TILE_SIZE)) {
+    const tile = getFromEmptyMap(placedTile.worldX, placedTile.worldY + TILE_SIZE)!
     tile.topRes = placedTile.tile.bottom;
-    addToEmptyMap(placedTile.worldX, placedTile.worldY + tileSize, tile);
+    addToEmptyMap(placedTile.worldX, placedTile.worldY + TILE_SIZE, tile);
     pushTiles.bottom = false;
   }
 
   // left
   if (pushTiles.left) {
     const tile = {
-      worldX: placedTile.worldX - tileSize,
+      worldX: placedTile.worldX - TILE_SIZE,
       worldY: placedTile.worldY,
       leftRes: "",
       topRes: "",
@@ -135,7 +136,7 @@ const checkNeighbours = (placedTile: PlacedTileT) => {
   // right
   if (pushTiles.right) {
     const tile = {
-      worldX: placedTile.worldX + tileSize,
+      worldX: placedTile.worldX + TILE_SIZE,
       worldY: placedTile.worldY,
       leftRes: placedTile.tile.right,
       topRes: "",
@@ -148,7 +149,7 @@ const checkNeighbours = (placedTile: PlacedTileT) => {
   if (pushTiles.top) {
     const tile = {
       worldX: placedTile.worldX,
-      worldY: placedTile.worldY - tileSize,
+      worldY: placedTile.worldY - TILE_SIZE,
       leftRes: "",
       topRes: "",
       rightRes: "",
@@ -160,7 +161,7 @@ const checkNeighbours = (placedTile: PlacedTileT) => {
   if (pushTiles.bottom) {
     const tile = {
       worldX: placedTile.worldX,
-      worldY: placedTile.worldY + tileSize,
+      worldY: placedTile.worldY + TILE_SIZE,
       leftRes: "",
       topRes: placedTile.tile.bottom,
       rightRes: "",
@@ -196,22 +197,18 @@ const checkPossibleTiles = (emptyTile: EmptyTileT) => {
   const workingTile = [];
   for(let i = 0; i < tilesJSON.length; i++) {
     const tile = tilesJSON[i];
-    if (emptyTile.leftRes !== "" && emptyTile.leftRes !== tile.left) {
-      continue;
-    }
-    if (emptyTile.topRes !== "" && emptyTile.topRes !== tile.top) {
-      continue;
-    }
-    if (emptyTile.rightRes !== "" && emptyTile.rightRes !== tile.right) {
-      continue;
-    }
-    if (emptyTile.bottomRes !== "" && emptyTile.bottomRes !== tile.bottom) {
-      continue;
-    }
-    workingTile.push(tile);
+    if (
+      (emptyTile.leftRes === "" || emptyTile.leftRes === tile.left) &&
+      (emptyTile.topRes === "" || emptyTile.topRes === tile.top) &&
+      (emptyTile.rightRes === "" || emptyTile.rightRes === tile.right) &&
+      (emptyTile.bottomRes === "" || emptyTile.bottomRes === tile.bottom)
+      ) {
+        workingTile.push(tile);
+      }
   }
   if (workingTile.length === 0) {
     console.log("No more working tiles")
+    console.log(emptyTile)
   } else {
     let workingTileI = getRandomInt(0, workingTile.length - 1);
     addNewPlacedTile(workingTile[workingTileI], emptyTile.worldX, emptyTile.worldY);
@@ -222,20 +219,20 @@ const checkPossibleTiles = (emptyTile: EmptyTileT) => {
 // btn.innerHTML = "Next tile";
 // document.body.appendChild(btn);
 // btn.addEventListener('click', () => {
-//   const emptyTilesI = 0 //getRandomInt(0, emptyTilesMap.values.length - 1);
 //   const emptyTiles = Array.from(emptyTilesMap);
+//   const emptyTilesI = getRandomInt(0, emptyTiles.length - 1);
 //   const [cordStr, emptyTile] = emptyTiles[emptyTilesI];
 //   emptyTilesMap.delete(cordStr);
 //   checkPossibleTiles(emptyTile);
 // })
 
-for (let i = 0; i < 10000; i++) {
+for (let i = 0; i < NUM_TILES; i++) {
   // const emptyTilesI = 0;
   const emptyTiles = Array.from(emptyTilesMap);
   if (emptyTiles.length === 0) {
     break;
   }
-  const emptyTilesI = getRandomInt(0, emptyTiles.length - 1);
+  const emptyTilesI = 0 //getRandomInt(0, emptyTiles.length - 1);
   const [cordStr, emptyTile] = emptyTiles[emptyTilesI];
   emptyTilesMap.delete(cordStr);
   checkPossibleTiles(emptyTile);
@@ -274,10 +271,10 @@ const draw = () => {
     ctx.rotate(placedTile.tile.rot*Math.PI/180);
     ctx.drawImage(
       placedTile.img,
-      -tileSize/2,
-      -tileSize/2,
-      tileSize,
-      tileSize
+      -TILE_SIZE/2,
+      -TILE_SIZE/2,
+      TILE_SIZE,
+      TILE_SIZE
     );
     ctx.restore();
   }
@@ -288,20 +285,49 @@ const draw = () => {
   //   ctx.rotate(placedTile.tile.rot*Math.PI/180);
   //   ctx.drawImage(
   //     placedTile.img,
-  //     -tileSize/2,
-  //     -tileSize/2,
-  //     tileSize,
-  //     tileSize
+  //     -TILE_SIZE/2,
+  //     -TILE_SIZE/2,
+  //     TILE_SIZE,
+  //     TILE_SIZE
   //   );
   //   ctx.restore();
   // }
 
+  // const debugDraw = (res: string, x: number, y: number) => {
+  //   if (res === "") {
+  //     return
+  //   }
+  //   switch (parseInt(res[1])) {
+  //     case 0:
+  //       ctx.fillStyle = 'green';
+  //       break;
+  //     case 1:
+  //       ctx.fillStyle = 'gray';
+  //       break;
+  //     case 2:
+  //       ctx.fillStyle = 'red';
+  //       break;
+  //     case 3:
+  //       ctx.fillStyle = 'blue';
+  //       break;
+  //   }
+
+  //   ctx.beginPath();
+  //   ctx.arc(x, y, 5, 0, Math.PI*2);
+  //   ctx.closePath();
+  //   ctx.fill();
+  // }
+
   // for (const emptyTile of emptyTilesMap.values()) {
   //   ctx.beginPath();
-  //   ctx.fillStyle = "red";
-  //   ctx.rect(emptyTile.worldX -tileSize/2, emptyTile.worldY -tileSize/2, tileSize, tileSize);
+  //   ctx.fillStyle = "white";
+  //   ctx.rect(emptyTile.worldX -TILE_SIZE/2, emptyTile.worldY -TILE_SIZE/2, TILE_SIZE, TILE_SIZE);
   //   ctx.fill();
   //   ctx.stroke();
+  //   debugDraw(emptyTile.leftRes, emptyTile.worldX - TILE_SIZE/3, emptyTile.worldY)
+  //   debugDraw(emptyTile.rightRes, emptyTile.worldX + TILE_SIZE/3, emptyTile.worldY)
+  //   debugDraw(emptyTile.topRes, emptyTile.worldX, emptyTile.worldY - TILE_SIZE/3)
+  //   debugDraw(emptyTile.bottomRes, emptyTile.worldX, emptyTile.worldY + TILE_SIZE/3)
   // }
 
   requestAnimationFrame(draw)
